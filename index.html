@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+
+    <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./app.js
+    " defer></script>
+</head>
+<body>
+    <header class="add-task">
+        <h1>To Do:</h1>
+        <form class="add-task__form">
+            <input type="text" placeholder="what are you plannin'?" class="add-task__input"
+            value="" />
+            <button class="add-task__button" id="add-task" type="submit">
+                <i class="fas fa-plus"></i>
+            </button>
+        </form>
+    </header>
+
+    <section class="task-list">
+
+        <div class="task">
+            <button class="task__btn">
+                <i class="fas fa-check" id="check"></i>
+            </button>
+            <input type="text" class="task__text" readonly value="lorem ipsum dolor sit amet" />
+            <button class="task__edit">
+                <i class="fas fa-edit"></i>
+            </button>
+            <button class="task__delete">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+        </div>
+
+        <div class="task checked">
+            <button class="task__btn">
+                <i class="fas fa-check"></i>
+            </button>
+            <input type="text" class="task__text" readonly value="lorem ipsum dolor sit amet" />
+            <button class="task__edit">
+                <i class="fas fa-edit"></i>
+            </button>
+            <button class="task__delete">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+        </div>
+
+        <div class="task">
+            <button class="task__btn">
+                <i class="fas fa-check"></i>
+            </button>
+            <input type="text" class="task__text edit" value="lorem ipsum dolor sit amet" />
+            <button class="task__edit edit">
+                <i class="fas fa-edit"></i>
+            </button>
+            <button class="task__delete">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+        </div>
+
+    </section>
+</body>
+</html>

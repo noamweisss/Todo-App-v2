@@ -1,36 +1,51 @@
-const newTaskInput = document.querySelector(".add-task__input").value;
+let newTaskInput = document.querySelector(".add-task__input").value;
 const addTaskButton = document.querySelector(".add-task__button");
 
 addTaskButton.addEventListener("click", (event) => {
   event.preventDefault();
 
-  const newTaskInput = document.querySelector(".add-task__input").value;
+  let newTaskInput = document.querySelector(".add-task__input").value;
 
   const newTask = document.createElement("div");
   newTask.className = "task";
-  newTask.innerHTML = `
-            <button class="task__btn">
-                <i class="fas fa-check"></i>
-            </button>
 
-            <input
-             type="text" 
-             class="task__text" 
-             value="${newTaskInput}" />
+  const checkButton = document.createElement("button");
+  checkButton.className = "task__btn";
 
-            <button class="task__edit">
-                <i class="fas fa-edit"></i>
-            </button>
-            
-            <button class="task__delete">
-                <i class="fas fa-trash-alt"></i>
-            </button>
-  `;
+  const editButton = document.createElement("button");
+  editButton.className = "task__edit";
+
+  const deleteButton = document.createElement("button");
+  deleteButton.className = "task__delete";
+  
+  const newTaskText = document.createElement("input");
+  newTaskText.classList.add = "task__text";
+  newTaskText.setAttribute("type", "text");
+  newTaskText.setAttribute("readonly", "readonly");
+  newTaskText.value = newTaskInput;
+
+  checkButton.innerHTML = `
+        <i class="fas fa-check" id="check"></i>`;
+  editButton.innerHTML = `
+        <i class="fas fa-edit"></i>`;
+  deleteButton.innerHTML = `
+        <i class="fas fa-trash-alt"></i>`;
+
+
+  newTask.appendChild(checkButton);
+  newTask.appendChild(newTaskText);
+  newTask.appendChild(editButton);
+  newTask.appendChild(deleteButton);
+
+  
   const taskList = document.querySelector(".task-list");
 
   taskList.appendChild(newTask);
 
-  console.log("success");
+  document.querySelector(".add-task__input").value = "";
+
+
   console.log(newTaskInput);
-  // Add your code here
+  
+  
 });
